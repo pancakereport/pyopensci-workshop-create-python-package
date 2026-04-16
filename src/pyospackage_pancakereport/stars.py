@@ -1,7 +1,5 @@
 """
-A module about stars.
-
-Inspo from "Airplanes" by B.o.B. and and Hayley Williams
+Inspo from "Airplanes" by B.o.B. and Hayley Williams
 """
 
 def airplanes():
