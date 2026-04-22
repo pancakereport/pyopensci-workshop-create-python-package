@@ -10,14 +10,30 @@ def shooting_stars():
     print("I could really use a wish right now.")
 
 def aeroplane(artist):
-    if artist.lower() == "frou frou":
-        print("Just flying with my aeroplane.")
-    elif artist.lower() == "red hot chili peppers":
-        print("And music is my aeroplane.")
-    elif artist.lower() == "bjork":
-        print("I'm taking an aeroplane across the world to follow my heart.")
-    else:
-        print("I didn't know that artist has an aeroplane song.")
+    # Defensive Check: Is it a string?
+    if not isinstance(artist, str):
+        print("Error: Make sure you pass in an artist's name as a string.")
+        return 
+    
+    # Defensive Check: Is it empty?
+    artist = artist.strip()
+    if not artist:
+        print("Error: Please provide a valid artist name (non-empty string).")
+        return
+    
+    lyrics = {
+        "frou frou": "Just flying with my aeroplane.",
+        "red hot chili peppers": "And music is my aeroplane.",
+        "bjork": "I'm taking an aeroplane across the world to follow my heart."
+    }
+    clean_artist = artist.lower()
+
+    message = lyrics.get(
+        clean_artist, 
+        f"I didn't know {artist} has an aeroplane song."
+    )
+    
+    print(message)
 
 def jet_plane_leaving():
     print("I'm leaving on a jet plane")

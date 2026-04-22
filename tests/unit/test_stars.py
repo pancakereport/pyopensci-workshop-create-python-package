@@ -16,4 +16,10 @@ def test_aeroplane(capsys):
     assert captured.out == "I'm taking an aeroplane across the world to follow my heart.\n"
     aeroplane("charli xcx")
     captured = capsys.readouterr()
-    assert captured.out == "I didn't know that artist has an aeroplane song.\n"
+    assert captured.out == "I didn't know charli xcx has an aeroplane song.\n"
+    aeroplane("   ")
+    captured = capsys.readouterr()
+    assert "Error: Please provide a valid artist name" in captured.out
+    aeroplane(123)
+    captured = capsys.readouterr()
+    assert "Error: Make sure you pass in an artist's name as a string." in captured.out
