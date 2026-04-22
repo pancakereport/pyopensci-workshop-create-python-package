@@ -8,7 +8,7 @@
 *TODO: the above badges that indicate python version and package version will only work if your package is on PyPI.
 If you don't plan to publish to PyPI, you can remove them.*
 
-pyospackage_pancakereport is a project that (describe what it does here).
+pyospackage_pancakereport is a project with two modules. `example` has one function that adds two numbers together. `stars` has functions that print lyrics about airplanes, aeroplanes, and jet planes.
 
 ## Get started
 
